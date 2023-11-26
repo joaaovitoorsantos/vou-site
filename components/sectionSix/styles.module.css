@@ -1,0 +1,91 @@
+
+$mantine-breakpoint-sm: 768px;
+
+.wrapper {
+  padding-top: calc(var(--mantine-spacing-xl) * 4);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: Greycliff CF, var(--mantine-font-family);
+  font-weight: 900;
+  margin-bottom: var(--mantine-spacing-md);
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(28px);
+    text-align: left;
+  }
+}
+
+.description {
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    text-align: left;
+  }
+}
+
+.comment {
+  padding: var(--mantine-spacing-lg) var(--mantine-spacing-xl);
+  margin-top: 30px;
+  max-width: calc(33.333% - 20px);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+.bodyteste {
+  padding-left: rem(54px);
+  padding-top: var(--mantine-spacing-sm);
+  font-size: var(--mantine-font-size-sm);
+}
+
+.content {
+  font-size: var(--mantine-font-size-sm);
+  /* Tamanho de fonte para os comentários */
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: var(--mantine-font-size-xs);
+    /* Tamanho de fonte menor para telas pequenas */
+  }
+
+  /* Remova a regra > p:last-child se você não está usando <p> para os comentários */
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fixFlex {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+@media (max-width: $mantine-breakpoint-sm) {
+  .mantine-Avatar-root {
+    width: 30px;
+    height: 30px;
+  }
+
+  .inner {
+    flex-direction: column;
+    /* Empilha os itens verticalmente em telas pequenas */
+  }
+
+  .fixFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+}
